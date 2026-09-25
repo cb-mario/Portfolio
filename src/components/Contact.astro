@@ -11,12 +11,21 @@ interface Props {
 
 const t = useTranslations(Astro.props.lang);
 
+// Muestra la URL legible: sin protocolo/www y con caracteres decodificados.
+const prettyUrl = (url: string) => decodeURI(url).replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+
 const channels: { label: string; value: string; href: string; icon: IconName; external?: boolean }[] = [
   { label: 'Email', value: site.email, href: `mailto:${site.email}`, icon: 'mail' },
-  { label: 'LinkedIn', value: site.linkedin, href: site.linkedin, icon: 'linkedin', external: true },
+  {
+    label: 'LinkedIn',
+    value: isPlaceholder(site.linkedin) ? site.linkedin : prettyUrl(site.linkedin),
+    href: site.linkedin,
+    icon: 'linkedin',
+    external: true,
+  },
   {
     label: 'GitHub',
-    value: site.github.replace(/^https?:\/\//, ''),
+    value: prettyUrl(site.github),
     href: site.github,
     icon: 'github',
     external: true,

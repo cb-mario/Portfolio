@@ -2,14 +2,13 @@
 
 export const site = {
   name: 'Mario Cerdá',
-  // TODO: pegar la URL real de LinkedIn
-  linkedin: '[Tu LinkedIn]',
+  linkedin: 'https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/',
   github: 'https://github.com/cb-mario',
   // TODO: pegar el email real de contacto
   email: '[Tu email]',
   // TODO: subir el PDF real a public/cv-mario-cerda.pdf
   cvFile: 'cv-mario-cerda.pdf',
-  stack: ['Java', 'C#', 'Astro', 'Node.js', 'JavaScript', 'SQL'],
+  stack: ['Java', 'C#', 'Node.js', 'JavaScript', 'TypeScript', 'Astro', 'Tailwind', 'SQL'],
 };
 
 /** true si el valor sigue siendo un placeholder del tipo "[...]". */

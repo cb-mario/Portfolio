@@ -31,8 +31,7 @@ npm run preview    # sirve dist/ localmente → http://localhost:4321/Porfolio/
 
 Los textos entre `[corchetes]` son placeholders y aparecen marcados en la web:
 
-- [ ] Frase del hero y párrafo "Sobre mí" (ES/EN) → `src/i18n/ui.ts`
-- [ ] URL de LinkedIn y email → `src/data/site.ts`
+- [ ] Email de contacto → `src/data/site.ts`
 - [ ] Descripción, tecnologías y enlaces de "Rutas de la Bici" → `src/data/projects.ts`
 - [ ] Foto: añadir `src/assets/profile.jpg` (se usa automáticamente)
 - [ ] CV: reemplazar `public/cv-mario-cerda.pdf` por el PDF real

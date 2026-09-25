@@ -1,3 +1,5 @@
+import type { Lang } from '../i18n/ui';
+
 // Datos personales y enlaces — edita aquí y se actualiza en todo el sitio.
 
 export const site = {
@@ -8,6 +10,10 @@ export const site = {
   email: '[Tu email]',
   // TODO: subir el PDF real a public/cv-mario-cerda.pdf
   cvFile: 'cv-mario-cerda.pdf',
+  spokenLanguages: [
+    { name: { es: 'Español', en: 'Spanish' }, level: { es: 'Nativo', en: 'Native' } },
+    { name: { es: 'Inglés', en: 'English' }, level: { es: 'Avanzado', en: 'Advanced' } },
+  ] satisfies { name: Record<Lang, string>; level: Record<Lang, string> }[],
   stack: ['Java', 'C#', 'Node.js', 'JavaScript', 'TypeScript', 'Astro', 'Tailwind', 'SQL'],
 };
 

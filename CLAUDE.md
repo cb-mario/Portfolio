@@ -10,7 +10,8 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 
 - **Nombre:** Mario Cerdá
 - **Rol:** Full Stack Developer
-- **Ubicación:** Alicante/Valencia, España
+- **Ubicación:** Alicante, Comunidad Valenciana (España)
+- **Idiomas:** español (nativo), inglés (avanzado)
 - **Stack principal:** Java, C#, Node.js, JavaScript, TypeScript, Astro, Tailwind, SQL
 - **LinkedIn:** https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/
 - **GitHub:** https://github.com/cb-mario

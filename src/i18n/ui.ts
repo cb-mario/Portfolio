@@ -11,7 +11,7 @@ export const defaultLang: Lang = 'es';
 export const ui = {
   es: {
     'meta.title': 'Mario Cerdá — Full Stack Developer',
-    'meta.description': 'Portfolio de Mario Cerdá, Full Stack Developer en Alicante/Valencia, España.',
+    'meta.description': 'Portfolio de Mario Cerdá, Full Stack Developer en Alicante, Comunidad Valenciana (España).',
 
     'nav.skip': 'Saltar al contenido',
     'nav.label': 'Navegación principal',
@@ -24,7 +24,7 @@ export const ui = {
 
     'hero.greeting': 'Hola, soy',
     'hero.role': 'Full Stack Developer',
-    'hero.location': 'Alicante/Valencia, España',
+    'hero.location': 'Alicante, Comunidad Valenciana',
     'hero.tagline': 'En busca de nuevas oportunidades.',
     'hero.photoAlt': 'Foto de Mario Cerdá',
 
@@ -32,6 +32,7 @@ export const ui = {
     'about.body':
       'Full Stack Developer en busca de nuevas oportunidades. Manejo Java, C# y Node.js en el backend, y JavaScript, TypeScript, Astro y Tailwind en el frontend, con SQL como base de datos habitual. Me interesa unirme a un equipo donde pueda seguir creciendo técnicamente y aportar soluciones bien pensadas de extremo a extremo.',
     'about.stack': 'Stack técnico',
+    'about.languages': 'Idiomas',
 
     'projects.title': 'Proyectos',
     'projects.code': 'Código',
@@ -45,7 +46,7 @@ export const ui = {
   },
   en: {
     'meta.title': 'Mario Cerdá — Full Stack Developer',
-    'meta.description': 'Portfolio of Mario Cerdá, Full Stack Developer based in Alicante/Valencia, Spain.',
+    'meta.description': 'Portfolio of Mario Cerdá, Full Stack Developer based in Alicante, Valencian Community (Spain).',
 
     'nav.skip': 'Skip to content',
     'nav.label': 'Main navigation',
@@ -58,7 +59,7 @@ export const ui = {
 
     'hero.greeting': "Hi, I'm",
     'hero.role': 'Full Stack Developer',
-    'hero.location': 'Alicante/Valencia, Spain',
+    'hero.location': 'Alicante, Valencian Community, Spain',
     'hero.tagline': 'Open to new opportunities.',
     'hero.photoAlt': 'Photo of Mario Cerdá',
 
@@ -66,6 +67,7 @@ export const ui = {
     'about.body':
       'Full Stack Developer looking for new opportunities. I work with Java, C# and Node.js on the backend, and JavaScript, TypeScript, Astro and Tailwind on the frontend, with SQL as my go-to database. I want to join a team where I can keep growing technically and deliver well-thought-out, end-to-end solutions.',
     'about.stack': 'Tech stack',
+    'about.languages': 'Languages',
 
     'projects.title': 'Projects',
     'projects.code': 'Code',

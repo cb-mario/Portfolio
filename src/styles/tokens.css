@@ -1,0 +1,76 @@
+/*
+ * Design tokens
+ * Accent: orange. Light theme uses a deeper orange (#c2410c) so it passes
+ * WCAG AA on light backgrounds; dark theme uses a lighter orange (#fb923c).
+ *
+ * Contrast ratios (checked):
+ *   light — text/bg 16.8, muted/bg 7.3, accent/bg 5.0, on-accent/accent 5.2
+ *   dark  — text/bg 17.4, muted/bg 7.5, accent/bg 8.4, on-accent/accent 7.7
+ */
+
+:root {
+  /* Typography */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk Variable', var(--font-sans);
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  --text-3xl: clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem);
+
+  --leading-tight: 1.1;
+  --leading-normal: 1.65;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container: 64rem;
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+  --header-height: 4rem;
+
+  /* Shape & motion */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-full: 999px;
+  --transition: 150ms ease;
+
+  /* Color — light (default) */
+  --color-bg: #fbfaf8;
+  --color-surface: #ffffff;
+  --color-text: #1c1917;
+  --color-text-muted: #57534e;
+  --color-border: #e7e5e4;
+  --color-accent: #c2410c;
+  --color-accent-hover: #9a3412;
+  --color-accent-soft: #fff1e6;
+  --color-on-accent: #ffffff;
+  --color-focus: #c2410c;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #12100e;
+  --color-surface: #1c1917;
+  --color-text: #f5f5f4;
+  --color-text-muted: #a8a29e;
+  --color-border: #2e2a27;
+  --color-accent: #fb923c;
+  --color-accent-hover: #fdba74;
+  --color-accent-soft: #2a1a0e;
+  --color-on-accent: #1c1917;
+  --color-focus: #fb923c;
+
+  color-scheme: dark;
+}

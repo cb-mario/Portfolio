@@ -21,7 +21,8 @@ npm run preview    # sirve dist/ localmente → http://localhost:4321/Porfolio/
 
 | Qué | Archivo |
 | --- | --- |
-| Enlaces (LinkedIn, GitHub, email), nombre del CV, stack | `src/data/site.ts` |
+| Enlaces (LinkedIn, GitHub, email), CV, stack, idiomas | `src/data/site.ts` |
+| Foto de perfil (se sustituye reemplazando el archivo) | `src/assets/profile.jpg` |
 | Proyectos (añadir = un objeto más en el array) | `src/data/projects.ts` |
 | Textos de la interfaz en ES / EN | `src/i18n/ui.ts` |
 | Colores y tipografía (design tokens) | `src/styles/tokens.css` |
@@ -31,9 +32,7 @@ npm run preview    # sirve dist/ localmente → http://localhost:4321/Porfolio/
 
 Los textos entre `[corchetes]` son placeholders y aparecen marcados en la web:
 
-- [ ] Email de contacto → `src/data/site.ts`
 - [ ] Descripción, tecnologías y enlaces de "Rutas de la Bici" → `src/data/projects.ts`
-- [ ] Foto: añadir `src/assets/profile.jpg` (se usa automáticamente)
 - [ ] CV: reemplazar `public/cv-mario-cerda.pdf` por el PDF real
 
 ## Estructura

@@ -39,7 +39,7 @@ const initials = site.name
   <div class="hero-photo">
     {
       photo ? (
-        <Image src={photo} alt={t('hero.photoAlt')} width={320} height={320} loading="eager" fetchpriority="high" />
+        <Image src={photo} alt={t('hero.photoAlt')} width={320} height={320} densities={[1, 2]} loading="eager" fetchpriority="high" />
       ) : (
         <div class="photo-placeholder" role="img" aria-label={t('hero.photoAlt')}>
           {initials}
@@ -110,9 +110,14 @@ const initials = site.name
   .hero-photo :global(img),
   .photo-placeholder {
     width: clamp(8rem, 30vw, 18rem);
+    height: auto;
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  .hero-photo :global(img) {
+    border: 1px solid var(--color-border);
   }
 
   .photo-placeholder {

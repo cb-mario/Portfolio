@@ -1,0 +1,64 @@
+---
+import { site } from '../data/site';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const t = useTranslations(Astro.props.lang);
+---
+
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container about">
+    <h2 id="about-title" class="section-title">{t('about.title')}</h2>
+    <p class="body">{t('about.body')}</p>
+
+    <h3 class="stack-title">{t('about.stack')}</h3>
+    <ul class="stack">
+      {site.stack.map((tech) => <li>{tech}</li>)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .body {
+    max-width: 60ch;
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .stack-title {
+    font-size: var(--text-sm);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-4);
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+  }
+
+  .stack li {
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: border-color var(--transition), color var(--transition);
+  }
+
+  .stack li:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+</style>

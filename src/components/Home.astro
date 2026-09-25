@@ -1,6 +1,9 @@
 ---
 // Contenido de la home, compartido por /  (ES) y /en/ (EN).
+// Para añadir una sección nueva (p. ej. Experiencia), crea el componente
+// y colócalo aquí en el orden deseado; el layout no necesita cambios.
 import Hero from './Hero.astro';
+import About from './About.astro';
 import type { Lang } from '../i18n/ui';
 
 interface Props {
@@ -11,3 +14,4 @@ const { lang } = Astro.props;
 ---
 
 <Hero lang={lang} />
+<About lang={lang} />

@@ -1,0 +1,211 @@
+---
+import { homeUrl, useTranslations } from '../i18n/utils';
+import { languages, type Lang } from '../i18n/ui';
+import { site } from '../data/site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const locales = Object.keys(languages) as Lang[];
+
+const links = [
+  { href: '#about', label: t('nav.about') },
+  { href: '#projects', label: t('nav.projects') },
+  { href: '#contact', label: t('nav.contact') },
+];
+---
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href={homeUrl(lang)}>{site.name}</a>
+
+    <nav class="nav" aria-label={t('nav.label')}>
+      <ul class="nav-links">
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="controls">
+      <ul class="lang-switch" aria-label={t('lang.label')}>
+        {
+          locales.map((l) => (
+            <li>
+              {l === lang ? (
+                <span class="lang-current" aria-current="true">
+                  {l.toUpperCase()}
+                </span>
+              ) : (
+                <a
+                  href={homeUrl(l)}
+                  hreflang={l}
+                  lang={l}
+                  data-lang={l}
+                  aria-label={`${t('lang.switch')} ${languages[l]}`}
+                >
+                  {l.toUpperCase()}
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+
+      <button class="theme-toggle" type="button" aria-label={t('theme.toggle')} data-theme-toggle>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const root = document.documentElement;
+
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {}
+  });
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-lang]').forEach((a) => {
+    a.addEventListener('click', () => {
+      try {
+        localStorage.setItem('lang', a.dataset.lang!);
+      } catch {}
+    });
+  });
+</script>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: var(--header-height);
+  }
+
+  .brand {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-links,
+  .lang-switch {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-links {
+    gap: var(--space-8);
+  }
+
+  .nav-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: var(--text-sm);
+  }
+
+  .nav-links a:hover {
+    color: var(--color-accent);
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .lang-switch {
+    gap: var(--space-1);
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+
+  .lang-switch a,
+  .lang-current {
+    display: inline-block;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+  }
+
+  .lang-switch a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .lang-switch a:hover {
+    color: var(--color-accent);
+  }
+
+  .lang-current {
+    color: var(--color-accent);
+  }
+
+  .theme-toggle {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: border-color var(--transition), color var(--transition);
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .theme-toggle svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .icon-moon,
+  :global([data-theme='dark']) .icon-sun {
+    display: none;
+  }
+
+  :global([data-theme='dark']) .icon-moon {
+    display: block;
+  }
+
+  @media (min-width: 48rem) {
+    .nav {
+      display: block;
+    }
+  }
+</style>

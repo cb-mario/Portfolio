@@ -1,0 +1,45 @@
+---
+import Icon, { type IconName } from './Icon.astro';
+import { isPlaceholder } from '../data/site';
+
+interface Props {
+  href: string;
+  label: string;
+  icon?: IconName;
+  variant?: 'primary' | 'ghost';
+  download?: boolean;
+  external?: boolean;
+}
+
+const { href, label, icon, variant = 'ghost', download, external } = Astro.props;
+// Mientras el dato real no exista, se muestra el placeholder en vez de un enlace roto.
+const pending = isPlaceholder(href);
+---
+
+{
+  pending ? (
+    <span class="btn btn-placeholder" title="TODO: completar en src/data/site.ts">
+      {icon && <Icon name={icon} />}
+      {href}
+    </span>
+  ) : (
+    <a
+      class={`btn btn-${variant}`}
+      href={href}
+      download={download || undefined}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+    >
+      {icon && <Icon name={icon} />}
+      {label}
+    </a>
+  )
+}
+
+<style>
+  .btn-placeholder {
+    border: 1px dashed var(--color-accent);
+    color: var(--color-text-muted);
+    cursor: default;
+  }
+</style>

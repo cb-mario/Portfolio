@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import LinkButton from './LinkButton.astro';
+import { site } from '../data/site';
+import { assetUrl, useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const t = useTranslations(Astro.props.lang);
+
+// Si existe src/assets/profile.jpg se usa automáticamente; si no, placeholder.
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/profile.jpg', { eager: true });
+const photo = Object.values(photos)[0]?.default;
+const initials = site.name
+  .split(' ')
+  .map((w) => w[0])
+  .join('');
+---
+
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero-text">
+    <p class="greeting">{t('hero.greeting')}</p>
+    <h1 id="hero-title">{site.name}</h1>
+    <p class="role">{t('hero.role')}</p>
+    <p class="location"><Icon name="pin" />{t('hero.location')}</p>
+    <p class="tagline">{t('hero.tagline')}</p>
+
+    <div class="actions">
+      <LinkButton href={assetUrl(site.cvFile)} label={t('cta.cv')} icon="download" variant="primary" download />
+      <LinkButton href={site.linkedin} label="LinkedIn" icon="linkedin" external />
+      <LinkButton href={site.github} label="GitHub" icon="github" external />
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    {
+      photo ? (
+        <Image src={photo} alt={t('hero.photoAlt')} width={320} height={320} loading="eager" fetchpriority="high" />
+      ) : (
+        <div class="photo-placeholder" role="img" aria-label={t('hero.photoAlt')}>
+          {initials}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    gap: var(--space-12);
+    align-items: center;
+    padding-block: var(--space-16);
+  }
+
+  .greeting {
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+  }
+
+  .role {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    margin-top: var(--space-3);
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin-top: var(--space-2);
+  }
+
+  .location svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .tagline {
+    max-width: 36ch;
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    margin-top: var(--space-6);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+  }
+
+  .hero-photo {
+    order: -1;
+    justify-self: start;
+  }
+
+  .hero-photo :global(img),
+  .photo-placeholder {
+    width: clamp(8rem, 30vw, 18rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .photo-placeholder {
+    display: grid;
+    place-items: center;
+    background: var(--color-accent-soft);
+    border: 2px dashed var(--color-accent);
+    color: var(--color-accent);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 600;
+  }
+
+  @media (min-width: 48rem) {
+    .hero {
+      grid-template-columns: 1fr auto;
+      min-height: calc(90vh - var(--header-height));
+      padding-block: var(--space-24);
+    }
+
+    .hero-photo {
+      order: 0;
+      justify-self: end;
+    }
+  }
+</style>

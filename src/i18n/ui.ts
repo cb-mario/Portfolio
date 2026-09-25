@@ -25,11 +25,12 @@ export const ui = {
     'hero.greeting': 'Hola, soy',
     'hero.role': 'Full Stack Developer',
     'hero.location': 'Alicante/Valencia, España',
-    'hero.tagline': '[Tu frase de presentación]',
+    'hero.tagline': 'En busca de nuevas oportunidades.',
     'hero.photoAlt': 'Foto de Mario Cerdá',
 
     'about.title': 'Sobre mí',
-    'about.body': '[Párrafo breve sobre tu trayectoria: qué haces, qué te interesa y qué buscas.]',
+    'about.body':
+      'Full Stack Developer en busca de nuevas oportunidades. Manejo Java, C# y Node.js en el backend, y JavaScript, TypeScript, Astro y Tailwind en el frontend, con SQL como base de datos habitual. Me interesa unirme a un equipo donde pueda seguir creciendo técnicamente y aportar soluciones bien pensadas de extremo a extremo.',
     'about.stack': 'Stack técnico',
 
     'projects.title': 'Proyectos',
@@ -58,11 +59,12 @@ export const ui = {
     'hero.greeting': "Hi, I'm",
     'hero.role': 'Full Stack Developer',
     'hero.location': 'Alicante/Valencia, Spain',
-    'hero.tagline': '[Your short intro sentence]',
+    'hero.tagline': 'Open to new opportunities.',
     'hero.photoAlt': 'Photo of Mario Cerdá',
 
     'about.title': 'About me',
-    'about.body': '[Short paragraph about your background: what you do, what interests you and what you are looking for.]',
+    'about.body':
+      'Full Stack Developer looking for new opportunities. I work with Java, C# and Node.js on the backend, and JavaScript, TypeScript, Astro and Tailwind on the frontend, with SQL as my go-to database. I want to join a team where I can keep growing technically and deliver well-thought-out, end-to-end solutions.',
     'about.stack': 'Tech stack',
 
     'projects.title': 'Projects',

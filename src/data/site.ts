@@ -6,8 +6,7 @@ export const site = {
   name: 'Mario Cerdá',
   linkedin: 'https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/',
   github: 'https://github.com/cb-mario',
-  // TODO: pegar el email real de contacto
-  email: '[Tu email]',
+  email: 'cerbano.m@gmail.com',
   // TODO: subir el PDF real a public/cv-mario-cerda.pdf
   cvFile: 'cv-mario-cerda.pdf',
   spokenLanguages: [

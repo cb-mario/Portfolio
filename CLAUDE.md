@@ -15,8 +15,8 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 - **Stack principal:** Java, C#, Node.js, JavaScript, TypeScript, Astro, Tailwind, SQL
 - **LinkedIn:** https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/
 - **GitHub:** https://github.com/cb-mario
-- **Email de contacto:** [PEGAR EMAIL AQUÍ]
-- **Foto:** habrá una foto mía en `src/assets/profile.jpg` (la subiré yo; usar placeholder mientras tanto)
+- **Email de contacto:** cerbano.m@gmail.com
+- **Foto:** `src/assets/profile.jpg`
 
 > Nota para Claude Code: cuando falte un dato real, usa un placeholder visualmente claro (ej. `[Tu email]`) en vez de inventar información falsa. Nunca inventes empresas, fechas ni logros que no estén en este documento.
 

@@ -32,7 +32,7 @@ export const ui = {
     'about.p1':
       'Estoy cursando 2º de Desarrollo de Aplicaciones Web (DAW) en modalidad semipresencial en el IES San Vicente. Lo compagino con proyectos propios, que es donde más aprendo: me encuentro con problemas reales, busco en la documentación y saco las cosas adelante por mi cuenta.',
     'about.p2':
-      'Donde más cómodo me siento es con Java y C#. También trabajo con PHP y SQL en la parte de servidor y bases de datos, y con HTML y CSS para maquetar y dejar las interfaces como tienen que quedar.',
+      'Donde más cómodo me siento es con Java y C#. También trabajo con PHP y SQL en la parte de servidor y bases de datos, y con HTML, CSS y JavaScript en el frontend, para que las interfaces se vean y funcionen como tienen que hacerlo.',
     'about.p3':
       'Ahora mismo estoy aprendiendo TypeScript, Astro, Tailwind CSS y AWS, y cogiendo soltura con Node.js gracias a BikeTelemetry, un proyecto personal para rutas en bici. Busco mi primera oportunidad de prácticas: un equipo donde aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
     'about.stack': 'Tecnologías que domino',
@@ -73,7 +73,7 @@ export const ui = {
     'about.p1':
       "I'm in my second year of Web Application Development (DAW), a blended-learning vocational programme at IES San Vicente. Alongside it I build my own projects, which is where I learn the most: I run into real problems, dig through the docs and figure things out on my own.",
     'about.p2':
-      "I'm most comfortable with Java and C#. I also work with PHP and SQL on the server and database side, and with HTML and CSS to build interfaces that look the way they should.",
+      "I'm most comfortable with Java and C#. I also work with PHP and SQL on the server and database side, and with HTML, CSS and JavaScript on the frontend, so interfaces look and behave the way they should.",
     'about.p3':
       "Right now I'm learning TypeScript, Astro, Tailwind CSS and AWS, and getting hands-on with Node.js through BikeTelemetry, a personal project for cycling routes. I'm looking for my first internship: a team where I can put what I know to use and keep learning from people with more experience.",
     'about.stack': 'What I work with',

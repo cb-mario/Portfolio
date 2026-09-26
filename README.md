@@ -2,7 +2,7 @@
 
 Portfolio personal (ES/EN, modo claro/oscuro) construido con [Astro](https://astro.build) y desplegado en GitHub Pages.
 
-🌐 https://cb-mario.github.io/Porfolio/
+🌐 https://cb-mario.github.io/Portfolio/
 
 ## Desarrollo local
 
@@ -10,12 +10,12 @@ Requisitos: **Node.js ≥ 22.12** y npm.
 
 ```bash
 npm install        # instalar dependencias
-npm run dev        # servidor de desarrollo → http://localhost:4321/Porfolio/
+npm run dev        # servidor de desarrollo → http://localhost:4321/Portfolio/
 npm run build      # build de producción en dist/
-npm run preview    # sirve dist/ localmente → http://localhost:4321/Porfolio/
+npm run preview    # sirve dist/ localmente → http://localhost:4321/Portfolio/
 ```
 
-> Las URLs incluyen `/Porfolio/` porque el sitio se publica en un subdirectorio de GitHub Pages (`base` en `astro.config.mjs`).
+> Las URLs incluyen `/Portfolio/` porque el sitio se publica en un subdirectorio de GitHub Pages (`base` en `astro.config.mjs`).
 
 ## Dónde editar el contenido
 

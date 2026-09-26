@@ -41,6 +41,6 @@ export const projects: Project[] = [
       en: 'This very site. Bilingual (ES/EN) with light/dark mode, built with Astro and deployed to GitHub Pages via GitHub Actions.',
     },
     tags: ['Astro', 'TypeScript', 'CSS'],
-    repo: 'https://github.com/cb-mario/Porfolio',
+    repo: 'https://github.com/cb-mario/Portfolio',
   },
 ];

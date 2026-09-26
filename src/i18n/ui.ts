@@ -30,7 +30,7 @@ export const ui = {
 
     'about.title': 'Sobre mí',
     'about.p1':
-      'Estoy cursando 2º de Desarrollo de Aplicaciones Web (DAW) en modalidad semipresencial en el IES San Vicente. Al no tener clase todos los días, buena parte del aprendizaje depende de mí: organizarme, tirar de documentación y sacar las prácticas adelante por mi cuenta.',
+      'Estoy cursando 2º de Desarrollo de Aplicaciones Web (DAW) en modalidad semipresencial en el IES San Vicente. Lo compagino con proyectos propios, que es donde más aprendo: me encuentro con problemas reales, busco en la documentación y saco las cosas adelante por mi cuenta.',
     'about.p2':
       'Donde más cómodo me siento es con Java y C#. También trabajo con PHP y SQL en la parte de servidor y bases de datos, y con HTML y CSS para maquetar y dejar las interfaces como tienen que quedar.',
     'about.p3':
@@ -71,7 +71,7 @@ export const ui = {
 
     'about.title': 'About me',
     'about.p1':
-      "I'm in my second year of Web Application Development (DAW), a blended-learning vocational programme at IES San Vicente. With fewer days in the classroom, a lot of the learning is on me: staying organised, reading the docs and getting assignments done on my own.",
+      "I'm in my second year of Web Application Development (DAW), a blended-learning vocational programme at IES San Vicente. Alongside it I build my own projects, which is where I learn the most: I run into real problems, dig through the docs and figure things out on my own.",
     'about.p2':
       "I'm most comfortable with Java and C#. I also work with PHP and SQL on the server and database side, and with HTML and CSS to build interfaces that look the way they should.",
     'about.p3':

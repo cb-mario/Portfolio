@@ -34,7 +34,7 @@ export const ui = {
     'about.p2':
       'Donde más cómodo me siento es con Java y C#. También trabajo con PHP y SQL en la parte de servidor y bases de datos, y con HTML, CSS y JavaScript en el frontend, para que las interfaces se vean y funcionen como tienen que hacerlo.',
     'about.p3':
-      'Ahora mismo estoy aprendiendo TypeScript, Astro, Tailwind CSS y AWS, y cogiendo soltura con Node.js gracias a BikeTelemetry, un proyecto personal para rutas en bici. Busco mi primera oportunidad de prácticas: un equipo donde aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
+      'Ahora mismo estoy aprendiendo React, TypeScript, Astro, Tailwind CSS y AWS, y cogiendo soltura con Node.js gracias a BikeTelemetry, un proyecto personal para rutas en bici. Busco mi primera oportunidad de prácticas: un equipo donde aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
     'about.stack': 'Tecnologías que domino',
     'about.learning': 'Aprendiendo ahora',
     'about.languages': 'Idiomas',
@@ -75,7 +75,7 @@ export const ui = {
     'about.p2':
       "I'm most comfortable with Java and C#. I also work with PHP and SQL on the server and database side, and with HTML, CSS and JavaScript on the frontend, so interfaces look and behave the way they should.",
     'about.p3':
-      "Right now I'm learning TypeScript, Astro, Tailwind CSS and AWS, and getting hands-on with Node.js through BikeTelemetry, a personal project for cycling routes. I'm looking for my first internship: a team where I can put what I know to use and keep learning from people with more experience.",
+      "Right now I'm learning React, TypeScript, Astro, Tailwind CSS and AWS, and getting hands-on with Node.js through BikeTelemetry, a personal project for cycling routes. I'm looking for my first internship: a team where I can put what I know to use and keep learning from people with more experience.",
     'about.stack': 'What I work with',
     'about.learning': 'Currently learning',
     'about.languages': 'Languages',

@@ -14,7 +14,7 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 - **Idiomas:** español (nativo), inglés (C1)
 - **Formación:** 2º de DAW (Desarrollo de Aplicaciones Web), modalidad semipresencial, IES San Vicente
 - **Domina:** Java, C#, PHP, SQL, HTML, CSS, JavaScript
-- **Aprendiendo:** Node.js, TypeScript, Astro, Tailwind CSS, AWS
+- **Aprendiendo:** Node.js, React, TypeScript, Astro, Tailwind CSS, AWS
 - **Busca:** primera oportunidad de prácticas
 - **LinkedIn:** https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/
 - **GitHub:** https://github.com/cb-mario

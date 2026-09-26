@@ -13,7 +13,8 @@ export const site = {
     { name: { es: 'Español', en: 'Spanish' }, level: { es: 'Nativo', en: 'Native' } },
     { name: { es: 'Inglés', en: 'English' }, level: { es: 'Avanzado', en: 'Advanced' } },
   ] satisfies { name: Record<Lang, string>; level: Record<Lang, string> }[],
-  stack: ['Java', 'C#', 'Node.js', 'JavaScript', 'TypeScript', 'Astro', 'Tailwind', 'SQL'],
+  stack: ['Java', 'C#', 'PHP', 'SQL', 'HTML', 'CSS', 'JavaScript'],
+  learning: ['Node.js', 'TypeScript', 'Astro', 'Tailwind CSS'],
 };
 
 /** true si el valor sigue siendo un placeholder del tipo "[...]". */

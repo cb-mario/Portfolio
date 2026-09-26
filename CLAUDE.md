@@ -12,7 +12,9 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 - **Rol:** Full Stack Developer
 - **Ubicación:** Alicante, Comunidad Valenciana (España)
 - **Idiomas:** español (nativo), inglés (avanzado)
-- **Stack principal:** Java, C#, Node.js, JavaScript, TypeScript, Astro, Tailwind, SQL
+- **Formación:** 2º de DAW (Desarrollo de Aplicaciones Web), modalidad semipresencial, IES San Vicente
+- **Domina:** Java, C#, PHP, SQL, HTML, CSS, JavaScript
+- **Aprendiendo:** Node.js, TypeScript, Astro, Tailwind CSS
 - **LinkedIn:** https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/
 - **GitHub:** https://github.com/cb-mario
 - **Email de contacto:** cerbano.m@gmail.com

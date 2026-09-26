@@ -29,9 +29,14 @@ export const ui = {
     'hero.photoAlt': 'Foto de Mario Cerdá',
 
     'about.title': 'Sobre mí',
-    'about.body':
-      'Full Stack Developer en busca de nuevas oportunidades. Manejo Java, C# y Node.js en el backend, y JavaScript, TypeScript, Astro y Tailwind en el frontend, con SQL como base de datos habitual. Me interesa unirme a un equipo donde pueda seguir creciendo técnicamente y aportar soluciones bien pensadas de extremo a extremo.',
-    'about.stack': 'Stack técnico',
+    'about.p1':
+      'Estoy cursando 2º de Desarrollo de Aplicaciones Web (DAW) en modalidad semipresencial en el IES San Vicente. Al no tener clase todos los días, buena parte del aprendizaje depende de mí: organizarme, tirar de documentación y sacar las prácticas adelante por mi cuenta.',
+    'about.p2':
+      'Donde más cómodo me siento es con Java y C#. También trabajo con PHP y SQL en la parte de servidor y bases de datos, y con HTML y CSS para maquetar y dejar las interfaces como tienen que quedar.',
+    'about.p3':
+      'Ahora mismo estoy aprendiendo Node.js, TypeScript, Astro y Tailwind CSS (este portfolio, sin ir más lejos, está hecho con Astro). Busco un equipo donde aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
+    'about.stack': 'Tecnologías que domino',
+    'about.learning': 'Aprendiendo ahora',
     'about.languages': 'Idiomas',
 
     'projects.title': 'Proyectos',
@@ -64,9 +69,14 @@ export const ui = {
     'hero.photoAlt': 'Photo of Mario Cerdá',
 
     'about.title': 'About me',
-    'about.body':
-      'Full Stack Developer looking for new opportunities. I work with Java, C# and Node.js on the backend, and JavaScript, TypeScript, Astro and Tailwind on the frontend, with SQL as my go-to database. I want to join a team where I can keep growing technically and deliver well-thought-out, end-to-end solutions.',
-    'about.stack': 'Tech stack',
+    'about.p1':
+      "I'm in my second year of Web Application Development (DAW), a blended-learning vocational programme at IES San Vicente. With fewer days in the classroom, a lot of the learning is on me: staying organised, reading the docs and getting assignments done on my own.",
+    'about.p2':
+      "I'm most comfortable with Java and C#. I also work with PHP and SQL on the server and database side, and with HTML and CSS to build interfaces that look the way they should.",
+    'about.p3':
+      "Right now I'm learning Node.js, TypeScript, Astro and Tailwind CSS (this portfolio is built with Astro, for a start). I'm looking for a team where I can put what I know to use and keep learning from people with more experience.",
+    'about.stack': 'What I work with',
+    'about.learning': 'Currently learning',
     'about.languages': 'Languages',
 
     'projects.title': 'Projects',

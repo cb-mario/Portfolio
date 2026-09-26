@@ -87,6 +87,11 @@ a:hover {
   }
 }
 
+/* Entre secciones seguidas basta con un solo padding, no la suma de los dos */
+.section + .section {
+  padding-top: 0;
+}
+
 .section-title {
   font-size: var(--text-2xl);
   margin-bottom: var(--space-8);

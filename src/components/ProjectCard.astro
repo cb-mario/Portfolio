@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import type { Project } from '../data/projects';
 import { useTranslations } from '../i18n/utils';
@@ -11,9 +12,21 @@ interface Props {
 
 const { project, lang } = Astro.props;
 const t = useTranslations(lang);
+const imageHref = project.demo ?? project.repo;
 ---
 
 <article class="card">
+  {
+    project.image && imageHref && (
+      <a class="preview" href={imageHref} target="_blank" rel="noopener noreferrer" tabindex="-1">
+        <Image src={project.image.src} alt={project.image.alt[lang]} widths={[400, 800]} sizes="(min-width: 48rem) 400px, 100vw" />
+        <span class="preview-label" aria-hidden="true">
+          {t('projects.visit')}
+          <Icon name="external" />
+        </span>
+      </a>
+    )
+  }
   <h3>{project.title}</h3>
   <p class="description">{project.description[lang]}</p>
 
@@ -63,6 +76,56 @@ const t = useTranslations(lang);
   .card:hover {
     border-color: var(--color-accent);
     transform: translateY(-2px);
+  }
+
+  .preview {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: calc(var(--space-8) * -1) calc(var(--space-8) * -1) var(--space-2);
+    border-bottom: 1px solid var(--color-border);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .preview :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    transition: transform 400ms ease;
+  }
+
+  .preview-label {
+    position: absolute;
+    right: var(--space-3);
+    bottom: var(--space-3);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: opacity 250ms ease, transform 250ms ease;
+  }
+
+  .preview-label :global(svg) {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .preview:hover :global(img) {
+    transform: scale(1.05);
+  }
+
+  .preview:hover .preview-label {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   h3 {

@@ -1,4 +1,6 @@
+import type { ImageMetadata } from 'astro';
 import type { Lang } from '../i18n/ui';
+import bikeTelemetryImg from '../assets/projects/biketelemetry.png';
 
 export interface Project {
   title: string;
@@ -9,6 +11,8 @@ export interface Project {
   repo?: string;
   /** URL de la demo o web publicada (opcional). */
   demo?: string;
+  /** Captura o imagen de portada; enlaza a la demo (o al repo si no hay demo). */
+  image?: { src: ImageMetadata; alt: Record<Lang, string> };
 }
 
 // Para añadir un proyecto, añade un objeto más a este array.
@@ -16,11 +20,19 @@ export const projects: Project[] = [
   {
     title: 'BikeTelemetry',
     description: {
-      es: 'Proyecto personal en desarrollo: una alternativa gratuita a las apps de suscripción para seguir y analizar rutas en bici. Permite crear rutas y exportarlas al ciclocomputador, con login mediante OAuth 2.0 (Strava y Google) y los tokens sensibles cifrados con AES-256-GCM.',
-      en: 'Personal project, work in progress: a free alternative to subscription apps for tracking and analysing bike rides. You can plan routes and export them to your bike computer, sign in with OAuth 2.0 (Strava and Google), and sensitive tokens are encrypted with AES-256-GCM.',
+      es: 'Aplicación web para registrar salidas en bici y planificar rutas. Importa GPX o sincroniza con Strava, calcula estadísticas y zonas de pulso, y traza rutas sobre el mapa para exportarlas al ciclocomputador. Acceso con email, Strava o Google (OAuth 2.0) y tokens cifrados con AES-256-GCM.',
+      en: 'Web app to log bike rides and plan routes. Import GPX files or sync with Strava, get stats and heart-rate zones, and draw routes on the map to export to your bike computer. Sign in with email, Strava or Google (OAuth 2.0), with tokens encrypted using AES-256-GCM.',
     },
-    // TODO: añadir enlaces a repo/demo cuando estén listos
-    tags: ['Node.js', 'Express', 'React', 'Prisma', 'SQLite', 'Tailwind CSS'],
+    tags: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Leaflet', 'Vercel', 'Supabase'],
+    repo: 'https://github.com/cb-mario/bike-telemetry',
+    demo: 'https://bike-telemetry.vercel.app',
+    image: {
+      src: bikeTelemetryImg,
+      alt: {
+        es: 'Portada de BikeTelemetry: «Cada kilómetro, medido.»',
+        en: 'BikeTelemetry cover: “Every kilometre, measured.”',
+      },
+    },
   },
   {
     title: 'Portfolio',

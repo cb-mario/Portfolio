@@ -28,7 +28,7 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 1. **Hero** — nombre, rol, frase corta de presentación, foto, botones a LinkedIn/GitHub y "Descargar CV".
 2. **Sobre mí** — párrafo breve de trayectoria y stack técnico (lista de tecnologías, con iconos si es sencillo de implementar).
 3. **Proyectos** — grid de tarjetas. Proyectos reales:
-   - **BikeTelemetry** — app de seguimiento y análisis de rutas ciclistas (Node.js, Express, React, Prisma/SQLite, Tailwind CSS; OAuth 2.0 con Strava y Google). En desarrollo.
+   - **BikeTelemetry** — app para registrar salidas en bici y planificar rutas (React, Node.js, Express, PostgreSQL + Prisma, Tailwind CSS, Leaflet; OAuth 2.0 con Strava y Google). Desplegada en Vercel + Supabase: https://bike-telemetry.vercel.app · repo: https://github.com/cb-mario/bike-telemetry
    - **Portfolio** — este sitio.
    - Diseñar el grid para que añadir proyectos futuros sea trivial: un array de datos en un único archivo (ej. `src/data/projects.ts`), no hardcodeado en el HTML/componentes.
 4. **Contacto** — enlaces a LinkedIn, GitHub, email, y botón de descarga del CV en PDF.

@@ -11,10 +11,11 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 - **Nombre:** Mario Cerdá
 - **Rol:** Full Stack Developer
 - **Ubicación:** Alicante, Comunidad Valenciana (España)
-- **Idiomas:** español (nativo), inglés (avanzado)
+- **Idiomas:** español (nativo), inglés (C1)
 - **Formación:** 2º de DAW (Desarrollo de Aplicaciones Web), modalidad semipresencial, IES San Vicente
 - **Domina:** Java, C#, PHP, SQL, HTML, CSS, JavaScript
-- **Aprendiendo:** Node.js, TypeScript, Astro, Tailwind CSS
+- **Aprendiendo:** Node.js, TypeScript, Astro, Tailwind CSS, AWS
+- **Busca:** primera oportunidad de prácticas
 - **LinkedIn:** https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/
 - **GitHub:** https://github.com/cb-mario
 - **Email de contacto:** cerbano.m@gmail.com
@@ -26,8 +27,9 @@ Portfolio personal para búsqueda de empleo como desarrollador full stack. Sitio
 
 1. **Hero** — nombre, rol, frase corta de presentación, foto, botones a LinkedIn/GitHub y "Descargar CV".
 2. **Sobre mí** — párrafo breve de trayectoria y stack técnico (lista de tecnologías, con iconos si es sencillo de implementar).
-3. **Proyectos** — grid de tarjetas. De momento solo un proyecto real:
-   - **Rutas de la Bici** — descripción pendiente de una línea (usar placeholder editable mientras tanto).
+3. **Proyectos** — grid de tarjetas. Proyectos reales:
+   - **BikeTelemetry** — app de seguimiento y análisis de rutas ciclistas (Node.js, Express, React, Prisma/SQLite, Tailwind CSS; OAuth 2.0 con Strava y Google). En desarrollo.
+   - **Portfolio** — este sitio.
    - Diseñar el grid para que añadir proyectos futuros sea trivial: un array de datos en un único archivo (ej. `src/data/projects.ts`), no hardcodeado en el HTML/componentes.
 4. **Contacto** — enlaces a LinkedIn, GitHub, email, y botón de descarga del CV en PDF.
 

@@ -25,7 +25,7 @@ export const ui = {
     'hero.greeting': 'Hola, soy',
     'hero.role': 'Full Stack Developer',
     'hero.location': 'Alicante, Comunidad Valenciana',
-    'hero.tagline': 'En busca de nuevas oportunidades.',
+    'hero.tagline': 'Buscando mi primera oportunidad de prácticas.',
     'hero.photoAlt': 'Foto de Mario Cerdá',
 
     'about.title': 'Sobre mí',
@@ -34,7 +34,7 @@ export const ui = {
     'about.p2':
       'Donde más cómodo me siento es con Java y C#. También trabajo con PHP y SQL en la parte de servidor y bases de datos, y con HTML y CSS para maquetar y dejar las interfaces como tienen que quedar.',
     'about.p3':
-      'Ahora mismo estoy aprendiendo Node.js, TypeScript, Astro y Tailwind CSS (este portfolio, sin ir más lejos, está hecho con Astro). Busco un equipo donde aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
+      'Ahora mismo estoy aprendiendo TypeScript, Astro, Tailwind CSS y AWS, y cogiendo soltura con Node.js gracias a BikeTelemetry, un proyecto personal para rutas en bici. Busco mi primera oportunidad de prácticas: un equipo donde aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
     'about.stack': 'Tecnologías que domino',
     'about.learning': 'Aprendiendo ahora',
     'about.languages': 'Idiomas',
@@ -65,7 +65,7 @@ export const ui = {
     'hero.greeting': "Hi, I'm",
     'hero.role': 'Full Stack Developer',
     'hero.location': 'Alicante, Valencian Community, Spain',
-    'hero.tagline': 'Open to new opportunities.',
+    'hero.tagline': 'Looking for my first internship.',
     'hero.photoAlt': 'Photo of Mario Cerdá',
 
     'about.title': 'About me',
@@ -74,7 +74,7 @@ export const ui = {
     'about.p2':
       "I'm most comfortable with Java and C#. I also work with PHP and SQL on the server and database side, and with HTML and CSS to build interfaces that look the way they should.",
     'about.p3':
-      "Right now I'm learning Node.js, TypeScript, Astro and Tailwind CSS (this portfolio is built with Astro, for a start). I'm looking for a team where I can put what I know to use and keep learning from people with more experience.",
+      "Right now I'm learning TypeScript, Astro, Tailwind CSS and AWS, and getting hands-on with Node.js through BikeTelemetry, a personal project for cycling routes. I'm looking for my first internship: a team where I can put what I know to use and keep learning from people with more experience.",
     'about.stack': 'What I work with',
     'about.learning': 'Currently learning',
     'about.languages': 'Languages',

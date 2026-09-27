@@ -1,58 +1,43 @@
-# Portfolio — Mario Cerdá
+# Portfolio
 
-Portfolio personal (ES/EN, modo claro/oscuro) construido con [Astro](https://astro.build) y desplegado en GitHub Pages.
+Mi portfolio personal: https://cb-mario.github.io/Portfolio/
 
-🌐 https://cb-mario.github.io/Portfolio/
+Lo hice con Astro y está en español e inglés, con modo claro y oscuro. Es un sitio estático, sin backend, que se publica en GitHub Pages cada vez que hago push a `main`.
 
-## Desarrollo local
+## Arrancarlo en local
 
-Requisitos: **Node.js ≥ 22.12** y npm.
+Hace falta Node 22.12 o superior.
 
 ```bash
-npm install        # instalar dependencias
-npm run dev        # servidor de desarrollo → http://localhost:4321/Portfolio/
-npm run build      # build de producción en dist/
-npm run preview    # sirve dist/ localmente → http://localhost:4321/Portfolio/
+npm install
+npm run dev
 ```
 
-> Las URLs incluyen `/Portfolio/` porque el sitio se publica en un subdirectorio de GitHub Pages (`base` en `astro.config.mjs`).
+Se abre en http://localhost:4321/Portfolio/. Lo de `/Portfolio/` es porque GitHub Pages lo sirve en ese subdirectorio (está configurado como `base` en `astro.config.mjs`).
 
-## Dónde editar el contenido
+Para generar la versión de producción:
 
-| Qué | Archivo |
-| --- | --- |
-| Enlaces (LinkedIn, GitHub, email), CV, stack, idiomas | `src/data/site.ts` |
-| Foto de perfil (se sustituye reemplazando el archivo) | `src/assets/profile.jpg` |
-| Proyectos (añadir = un objeto más en el array) | `src/data/projects.ts` |
-| Textos de la interfaz en ES / EN | `src/i18n/ui.ts` |
-| Colores y tipografía (design tokens) | `src/styles/tokens.css` |
-| Orden de las secciones de la home | `src/components/Home.astro` |
-
-### Pendiente (placeholders)
-
-Los textos entre `[corchetes]` son placeholders y aparecen marcados en la web:
-
-- [ ] Descripción, tecnologías y enlaces de "Rutas de la Bici" → `src/data/projects.ts`
-- [ ] CV: reemplazar `public/cv-mario-cerda.pdf` por el PDF real
-
-## Estructura
-
+```bash
+npm run build     # genera dist/
+npm run preview   # para verla antes de subirla
 ```
-public/            archivos estáticos (CV, favicon)
-src/
-  assets/          imágenes optimizadas por Astro (foto de perfil)
-  components/      secciones y componentes de UI
-  data/            datos del sitio y de proyectos
-  i18n/            diccionarios ES/EN y utilidades
-  layouts/         layout base (head, header, footer)
-  pages/           rutas: / (ES) y /en/ (EN)
-  styles/          tokens y estilos globales
-```
+
+## Cómo está organizado
+
+- `src/data/site.ts`: mis datos, enlaces, el stack y los idiomas.
+- `src/data/projects.ts`: los proyectos. Para añadir uno nuevo basta con meter otro objeto en el array.
+- `src/i18n/ui.ts`: todos los textos de la web en los dos idiomas.
+- `src/styles/tokens.css`: colores y tipografía.
+- `src/components/`: cada sección de la página es un componente. El orden se decide en `Home.astro`.
+- `public/cv-mario-cerda.pdf`: el CV que se descarga desde la web.
 
 ## Despliegue
 
-Cada push a `main` ejecuta `.github/workflows/deploy.yml`, que hace el build y publica en GitHub Pages.
+El workflow de `.github/workflows/deploy.yml` hace el build y lo publica en GitHub Pages. En el repo tiene que estar activado **Settings → Pages → Source: GitHub Actions**.
 
-Configuración inicial (una sola vez): en GitHub → **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Si algún día cambio el nombre del repo, hay que actualizar `base` en `astro.config.mjs`.
 
-Si cambia el nombre del repositorio, actualiza `base` en `astro.config.mjs`.
+## Contacto
+
+- LinkedIn: https://www.linkedin.com/in/mario-cerd%C3%A1-5344b3427/
+- Email: cerbano.m@gmail.com

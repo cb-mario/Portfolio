@@ -43,6 +43,8 @@ export const ui = {
     'projects.code': 'Código',
     'projects.demo': 'Demo',
     'projects.visit': 'Visitar web',
+    'projects.viewCode': 'Ver código',
+    'projects.wip': 'En desarrollo',
 
     'contact.title': 'Contacto',
     'contact.body': '¿Hablamos? Puedes encontrarme en estos canales.',
@@ -84,6 +86,8 @@ export const ui = {
     'projects.code': 'Code',
     'projects.demo': 'Demo',
     'projects.visit': 'Visit site',
+    'projects.viewCode': 'View code',
+    'projects.wip': 'In progress',
 
     'contact.title': 'Contact',
     'contact.body': "Let's talk. You can find me here.",

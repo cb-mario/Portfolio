@@ -21,13 +21,16 @@ const imageHref = project.demo ?? project.repo;
       <a class="preview" href={imageHref} target="_blank" rel="noopener noreferrer" tabindex="-1">
         <Image src={project.image.src} alt={project.image.alt[lang]} widths={[400, 800]} sizes="(min-width: 48rem) 400px, 100vw" />
         <span class="preview-label" aria-hidden="true">
-          {t('projects.visit')}
-          <Icon name="external" />
+          {project.demo ? t('projects.visit') : t('projects.viewCode')}
+          <Icon name={project.demo ? 'external' : 'github'} />
         </span>
       </a>
     )
   }
-  <h3>{project.title}</h3>
+  <h3>
+    {project.title}
+    {project.wip && <span class="wip">{t('projects.wip')}</span>}
+  </h3>
   <p class="description">{project.description[lang]}</p>
 
   {
@@ -129,7 +132,21 @@ const imageHref = project.demo ?? project.repo;
   }
 
   h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-3);
     font-size: var(--text-xl);
+  }
+
+  .wip {
+    padding: 0 var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
   }
 
   .description {

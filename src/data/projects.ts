@@ -1,7 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import type { Lang } from '../i18n/ui';
 import apuntaImg from '../assets/projects/apunta.png';
-import bikeTelemetryImg from '../assets/projects/biketelemetry.png';
 
 export interface Project {
   title: string;
@@ -33,24 +32,6 @@ export const projects: Project[] = [
       alt: {
         es: 'Captura de Apunta: listado de tareas con el resumen por estado y una tarea marcada como vencida',
         en: 'Apunta screenshot: task list with the per-status summary and one task flagged as overdue',
-      },
-    },
-  },
-  {
-    title: 'BikeTelemetry',
-    wip: true,
-    description: {
-      es: 'Aplicación web para registrar salidas en bici y planificar rutas. Importa GPX o sincroniza con Strava, calcula estadísticas y zonas de pulso, y traza rutas sobre el mapa para exportarlas al ciclocomputador. Acceso con email, Strava o Google (OAuth 2.0) y tokens cifrados con AES-256-GCM.',
-      en: 'Web app to log bike rides and plan routes. Import GPX files or sync with Strava, get stats and heart-rate zones, and draw routes on the map to export to your bike computer. Sign in with email, Strava or Google (OAuth 2.0), with tokens encrypted using AES-256-GCM.',
-    },
-    tags: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Leaflet', 'Vercel', 'Supabase'],
-    repo: 'https://github.com/cb-mario/bike-telemetry',
-    demo: 'https://bike-telemetry.vercel.app',
-    image: {
-      src: bikeTelemetryImg,
-      alt: {
-        es: 'Portada de BikeTelemetry: «Cada kilómetro, medido.»',
-        en: 'BikeTelemetry cover: “Every kilometre, measured.”',
       },
     },
   },
